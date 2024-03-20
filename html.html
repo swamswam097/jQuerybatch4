@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html method</title>
+</head>
+<body>
+
+	<h1>Welcome to jQuery</h1>
+
+	<h3>This is awesome js library</h3>
+
+	<div> 
+		<h2> 
+			<u>Are you ready to learn js library</u>
+		</h2>
+	</div>
+
+	<button type="button">Click me</button>
+
+
+
+
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		 $(document).ready(function(){ 
+
+		 	console.log($('h1').html()); //
+		 	console.log($('h3').html()); //
+
+		 	// $('button').click(function(){ 
+		 	// 	// console.log($('h1').html());
+		 	// 	$('h1').html('Hello jQuery');
+		 	// });
+
+		 	// $('button').click(function(){ 
+		 	// 	// console.log($('h1').html());
+		 	// 	window.alert($('h3').html());
+		 	// }); 
+
+		 	// $('button').click(function(){ 
+		 	// 	// console.log($('h1').html());
+		 	// 	$('h1').html('Hello <u>jQuery</u>');
+		 	// });
+
+		 	$('button').click(function(){ 
+		 		const geth2 = $('h2').html();
+		 		console.log(geth2); //<u>Are you ready to learn js library</u>
+		 	});
+
+
+		 });
+
+
+	
+
+	</script>
+
+</body>
+</html>
+
+<!-- 18HT -->
