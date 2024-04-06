@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Width method</title>
+	<style type="text/css"> 
+
+		body{ 
+			padding: 0;
+			margin: 0;
+		 }
+
+		
+
+		.box1{ 
+			width: 100px;
+			height: 100px;
+
+			border: 5px solid #000;
+
+			padding: 10px;
+			margin: 5px;
+
+		 }
+
+		.box2{ 
+			width: 200px;
+			height: 100px;
+		 }
+
+		.box3{ 
+			width: 300px;
+			height: 100px;
+		 }
+
+		.box4{ 
+			width: 400px;
+			height: 100px;
+		 }
+
+		.box5{ 
+			width: 500px;
+			height: 100px;
+		 }
+
+		.red{ 
+			background-color: red;
+		 }
+
+		.green{ 
+			background-color: green;
+		 }
+
+		.orange{ 
+			background-color: orange;
+		 }
+
+		.blue{ 
+			background-color: blue;
+		 }
+
+		.violet{ 
+			background-color: violet;
+		}
+		
+
+	</style>
+</head>
+<body>
+
+	
+	<div class="container"> 
+
+		<div class="box1 red">Box-1</div>
+		<div class="box2 green">Box-2</div>
+		<div class="box3 orange">Box-3</div>
+		<div class="box4 blue">Box-4</div>
+		<div class="box5 violet">Box-5</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		$(document).ready(function(){ 
+
+			$('.box1').click(function(){ 
+				console.log("Box1 width =" + $(this).width()); //100
+				console.log("Box1 inner width =" + $(this).innerWidth()); //120 (count padding)
+				console.log("Box1 outer width =" + $(this).outerWidth()); //130 (width+padding+border)
+			});
+
+			$('.box2').click(function(){ 
+				console.log("Box1 width =" + $(this).width()); //200
+				console.log("Box1 inner width =" + $(this).innerWidth()); //
+				console.log("Box1 outer width =" + $(this).outerWidth()); //
+			});
+
+			$('.box3').click(function(){ 
+				console.log("Box1 width =" + $(this).width()); //300
+				console.log("Box1 inner width =" + $(this).innerWidth()); //
+				console.log("Box1 outer width =" + $(this).outerWidth()); //
+			});
+
+			$('.box4').click(function(){ 
+				console.log("Box1 width =" + $(this).width()); //400
+				console.log("Box1 inner width =" + $(this).innerWidth()); //
+				console.log("Box1 outer width =" + $(this).outerWidth()); //
+			});
+
+			$('.box5').click(function(){ 
+				console.log("Box1 width =" + $(this).width()); //500
+				console.log("Box1 inner width =" + $(this).innerWidth()); //
+				console.log("Box1 outer width =" + $(this).outerWidth()); //
+			});
+
+
+
+            
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- 26TG -->
+
+
+
+
+
+

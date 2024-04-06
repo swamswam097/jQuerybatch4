@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>offset and postion</title>
+	<style type="text/css"> 
+
+		body{ 
+			padding: 0;
+			margin: 0;
+		 }
+
+		.offset{ 
+			display:flex;
+		}
+
+		.box{ 
+			width: 100px;
+			height: 100px;
+
+			margin: 10px;
+
+		 }
+
+		.red{ 
+			background-color: red;
+		 }
+
+		.green{ 
+			background-color: green;
+		 }
+
+		.orange{ 
+			background-color: orange;
+		 }
+
+		.blue{ 
+			background-color: blue;
+		 }
+		
+
+	</style>
+</head>
+<body>
+
+	
+	<div class="container"> 
+
+		<div class="offset"> 
+			<div class="box red">Box1</div>
+			<div class="box green">Box2</div>
+			<div class="box orange">Box3</div>
+			<div class="box blue">Box4</div>
+		</div>
+
+		<table> 
+			<tr> 
+				<td id="offresultleft"></td>
+				<td id="offresulttop"></td>
+			</tr>
+
+			<tr> 
+				<td id="posresultleft"></td>
+				<td id="posresulttop"></td>
+			</tr>
+		</table>
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		$(document).ready(function(){ 
+
+			$('.box').click(function(){ 
+				const getoffset = $(this).offset();
+				// console.log(getoffset);
+
+				$('#offresultleft').html('left offset value : <b>'+getoffset.left+'</b>');
+				$('#offresulttop').html('top offset value : <b>'+getoffset.top+'</b>');
+
+			});
+
+			$('.box').click(function(){ 
+				const getposition = $(this).position();
+				// console.log(getoffset);
+
+				$('#posresultleft').html('posleft offset value : <b>'+getposition.left+'</b>');
+				$('#posresulttop').html('postop offset value : <b>'+getposition.top+'</b>');
+
+			});
+
+			$()
+
+
+
+            
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- 26TG -->
+
+
+
+
+
+

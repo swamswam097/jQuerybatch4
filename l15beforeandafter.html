@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Before and After</title>
+	<style type="text/css"> 
+
+		
+
+	</style>
+</head>
+<body>
+
+	<h1>Hello Myanmar</h1>
+	<h1>Hello Thailand</h1>
+
+	<button type="button" id="beforebtn">Before Insert</button>
+	<button type="button" id="afterbtn">After Insert</button>
+
+
+	
+
+	
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		$(document).ready(function(){ 
+
+			$('#beforebtn').click(function(){ 
+				$('h1').before("Hello World");
+			});
+
+			$('#afterbtn').click(function(){ 
+				$('h1').after("<p><b>I am working</b></p>");
+			});
+
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- before("text") is to add the text ouside of called element and above the called element -->
+
+<!-- after('Text') is to add the text ouside and below called element -->
+
+
+
+

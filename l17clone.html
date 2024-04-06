@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clone Method</title>
+	<style type="text/css"> 
+
+		
+
+	</style>
+</head>
+<body>
+
+	<div class="box"> 
+		<h1>Hello Myanmar</h1>
+	</div>
+
+	<div class="container"> 
+	</div>
+
+
+	<button type="button">Clone me</button>
+	
+
+	
+
+	
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		$(document).ready(function(){ 
+
+             //=>Clone
+			// $('button').click(function(){ 
+			// 	$('h1').clone().appendTo('.container');
+			//  });
+
+			$('button').click(function(){ 
+				$('.box h1').clone().appendTo('.container');
+			});
+            
+
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- prepend is to add "text" in the called element above -->
+<!-- append is to add "text" in the called element below -->
+<!-- appendTo is same ass apend but have to type oppiste -->
+
+
+
+
+

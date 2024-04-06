@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reload method</title>
+	<style type="text/css"> 
+
+		 body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 600px;
+            background-color: #f4f4f4;
+
+            padding: 20px;
+
+            
+        }
+      
+		
+
+	</style>
+</head>
+<body>
+
+	<div class="container"> 
+		<h1>Refresh or Reload a page with jQuery</h1>
+		<p id="datetime"></p>
+
+		<button type="button">Reload</button>
+	</div>
+
+
+	
+
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		$(document).ready(function(){ 
+
+			let getdate = new Date();
+			$('#datetime').text(getdate);
+
+			$('button').click(function(){ 
+				window.location.reload();
+			});
+
+
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- 20TR -->
+

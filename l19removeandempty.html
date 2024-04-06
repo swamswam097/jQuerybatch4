@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>remove and empty Method</title>
+	<style type="text/css"> 
+
+		
+
+	</style>
+</head>
+<body>
+
+	
+	<div> 
+		<h1>Hello Heading Tag H1</h1>
+		<h2>Hello Heading Tag H2</h2>
+		<h3>Hello Heading Tag H3</h3>
+		<h2>Hello Heading Tag H2</h2>
+		<h1>Hello Heading Tag H1</h1>
+		<span>Hello I am Span Tag</span>
+	</div>
+
+	<div> 
+		<h1>Hello Heading Tag H1</h1>
+		<h2>Hello Heading Tag H2</h2>
+		<h3>Hello Heading Tag H3</h3>
+		<h2 class="headingh2">Hello Heading Tag H2 </h2>
+		<h1>Hello Heading Tag H1</h1>
+		<span>Hello I am Span Tag</span>
+	</div>
+
+	    <button type="button" id="remove-btn">Remove H2</button>
+        <button type="button" id="detach-btn">Detach H2</button>
+        <button type="button" id="empty-btn">Empty</button>
+
+        <button type="button" id="add-btn">Add Me</button>
+
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		$(document).ready(function(){ 
+
+			//=> Remove
+            $('#remove-btn').click(function(){ 
+            	$('h2').remove();
+            });
+
+            //=detach (all)
+            $('#detach-btn').click(function(){ 
+            	$('div').detach();
+            });
+
+            //=empty() (empty only child element)
+            $('#empty-btn').click(function(){ 
+            	$('div').empty();
+            });
+
+            //=> add()
+            $('#add-btn').click(function(){ 
+
+            	// $('h1').css({ 
+            	// 	"background-color":"pink",
+            	// 	"border":"3px solid black"
+            	// });
+
+            	// $('h1,h2').css({ 
+            	// 	"background-color":"pink",
+            	// 	"border":"3px solid black"
+            	// });
+
+            	// $('h1,.headingh2').css({ 
+            	// 	"background-color":"pink",
+            	// 	"border":"3px solid black"
+            	// });
+
+            	// $('h1,h2,h3,span').css({ 
+            	// 	"background-color":"pink",
+            	// 	"border":"3px solid black"
+            	// });
+
+            	// $('h1').add('span').css({ 
+            	// 	"background-color":"pink",
+            	// 	"border":"3px solid black"
+            	// });
+
+
+            	// $('h1').add('span,h3').css({ 
+            	// 	"background-color":"pink",
+            	// 	"border":"3px solid black"
+            	// });
+
+            	$('h1').add('span').add('h2').css({ 
+            		"background-color":"pink",
+            		"border":"3px solid black"
+            	});
+
+            });
+
+
+
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- 25DE -->
+
+
+
+
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delegate and Undelegate Method</title>
+	<style type="text/css"> 
+
+		
+
+	</style>
+</head>
+<body>
+
+	
+	<h1>Hello Myanmar</h1>
+	<h1>Hello Thailand</h1>
+	<h2>Hello Indoneasia</h2>
+
+	
+
+
+
+	<button type="button" id="dlg-btn">Delegate me</button>
+	<button type="button" id="undlg-btn">Undelegate me</button>
+	<button type="button" id="hi-btn">Say Hi</button>
+	<button type="button" id="zoom-btn">Zoom</button>
+
+	<hr/>
+
+	<div class="container"> 
+		<h3>Hello USA</h3>
+		<button type="button" id="dlgme-btn">Delegate Me</button>
+		<button type="button" id="undlgme-btn">Undelegate Me</button>
+	</div>
+
+
+	
+
+	
+
+	
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		$(document).ready(function(){ 
+
+            // $(selector).delegate(selector,eventtype,callbackfunction);
+
+            $('body').delegate('#dlg-btn','click',function(){ 
+            	$('h1').after("<p>Thanks For delegate me</p>");
+            });
+            
+            //=> undelegate
+            $('#undlg-btn').click(function(){ 
+            	$('body').undelegate();
+            });
+
+            $('#hi-btn').click(function(){ 
+            	console.log('hello sir');
+            });
+
+            let x = 0;
+
+            $('#zoom-btn').click(function(e){ 
+            	// console.log(e.target);
+
+            	// $('h2').css({ 
+            	// 	fontsize:"+=10px"
+            	// });
+
+            	$("h2").animate({ 
+            		fontSize:"+=10px"
+            	});
+
+            	// $(this).text("Zoom" + (x+1));
+            	$("#zoom-btn").text("Zoom" + (x+1));
+            	x++;
+
+            	if(x >= 5){ 
+            		$('body').undelegate(e);
+            	}
+            });
+
+            $('.container').delegate('#dlgme-btn','click',function(){ 
+            	$('h3').after("<p><i>Thanks For delegate me again</i></p>");
+            });
+
+            $("#undlgme-btn").click(function(){ 
+            	// $('.conatiner').undelegate();
+            	$('.container').undelegate('click');
+            });
+
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- 25DE -->
+
+
+
+
+
+

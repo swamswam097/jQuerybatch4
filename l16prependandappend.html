@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prepend and Append Method</title>
+	<style type="text/css"> 
+
+		
+
+	</style>
+</head>
+<body>
+
+	<h1>Hello Myanmar</h1>
+	<h1>Hello Thailand</h1>
+
+	<button type="button" id="prependbtn">Prepend Text</button>
+	<button type="button" id="appendbtn">Append Text</button>
+	<button type="button" id="appendtobtn">Append To Text</button>
+
+
+
+	
+
+	
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		$(document).ready(function(){ 
+
+             
+            //=> Prepend
+			$('#prependbtn').click(function(){ 
+				$('h1').prepend('Hello World');
+			});
+
+            //=> Append
+			$('#appendbtn').click(function(){ 
+				$('h1').append('<i>Hello Hi</i>');
+			});
+
+			//=> AppendTo
+			$('#appendtobtn').click(function(){ 
+				$('<p><u>Thank You</u></p>').appendTo('h1');
+			});
+
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- prepend is to add "text" in the called element above -->
+<!-- append is to add "text" in the called element below -->
+<!-- appendTo is same ass apend but have to type oppiste -->
+
+
+
+
+

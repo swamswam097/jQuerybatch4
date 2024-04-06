@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS method</title>
+	<style type="text/css"> 
+
+		
+
+		
+
+	</style>
+</head>
+<body>
+
+	<h1>Hello Myanmar</h1>
+	<h2>Hello Thailand</h2>
+	<h3>Hello Indonesia</h3>
+	<h4>Hello Srilanka</h4>
+	
+	<button type="button">Change new color</button>
+
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		$(document).ready(function(){ 
+
+		$(document).click(function(){ 
+
+				//=> css(property,value) Function
+			//=> css({}) Function
+
+			$('h1').css('background-color','red');
+			$('h2').css('background-color','steelblue');
+			$('h3').css('background-color','green').css('color','white');
+			$('h4').css({ 
+				'background-color':'blue',
+				'color':'#fff',
+				'font-family':'Arial'
+			});
+
+		});
+
+ 
+			
+
+
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>attr and remove attr</title>
+	<style type="text/css"> 
+
+		body{ 
+			height: 100vh;
+
+			display: felx;
+			justify-content: center;
+			align-items: center;
+
+			padding: 0;
+			margin: 0;
+		 }
+
+		.container{ 
+			width: 800px;
+			background-color: #f4f4f4;
+
+			padding: 20px;
+		 }
+
+		.text-primary{ 
+			color: blue;
+		 }
+
+		.text-light{ 
+			color: #fff;
+		 }
+
+		.text-center {
+            text-align: center;
+        }
+
+        .bg-info {
+            background-color: skyblue;
+        }
+		
+
+	</style>
+</head>
+<body>
+
+	
+	<div class="container"> 
+
+		<div> 
+		  <img src="./img/logo1.png" alt="logo1" width="100"/>
+		  <h1 id="1">Hello Myanmar</h1>
+		  <h1 id="2">Hello Thailand</h1>
+		  <h1 id="3">Hello Indonesia</h1>
+		  <h1 id="4">Hello Srilanka</h1>
+	    </div>
+
+	<button type="button" id="txtpri-btn">text-primary</button>
+	<button type="button" id="bginfo-btn">bg-info</button>
+	<button type="button" id="txtbg-btn">text-background</button>
+	<button type="button" id="multiattr-btn">multi-attr</button>
+	<button type="button" id="removeattr-btn">remove-attr</button>
+	<button type="button" id="textcenter-btn">text-center</button>
+	<button type="button" id="rmtxtlight-btn">remove text-light</button>
+	<button type="button" id="hasclass-btn">has-class</button>
+	<button type="button" id="toggleclass-btn">toggle-class</button>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="./libs/jquery-3.7.1.min.js"></script>
+
+	<script type="text/javascript"> 
+
+		$(document).ready(function(){ 
+
+
+            //=> attr(attribute,value)
+			$('#txtpri-btn').click(function(){ 
+				$('h1').attr("class","text-primary");
+			});
+
+			$('#bginfo-btn').click(function(){ 
+				$('h1').attr("class","bg-info");
+			});
+
+			$('#txtbg-btn').click(function(){ 
+				$('h1').attr("class","text-light bg-info");
+			});
+
+            //=> mutilattr
+			$('#multiattr-btn').click(function(){ 
+				$('img').attr({ 
+					src:"./img/logo2.png",
+					alt:"logo2",
+					"width":"200",
+					"title":"this is logo2",
+					"abc":"this is log name"
+
+				});
+			});
+
+			//removeattr
+
+			$('#removeattr-btn').click(function(){ 
+				// $('h1').removeAttr('class');
+				// $('h1').remoeAttr('class id');
+				$('h1').removeAttr('id class');
+			});
+
+			//addClass(value)
+			$('#textcenter-btn').click(function(){ 
+				// $('h1').attr('class','text-center');
+				$('h1').addClass('text-center');
+			});
+
+			//removeClass(value)
+			$('#rmtxtlight-btn').click(function(){ 				
+				$('h1').removeClass('text-light');
+			});
+
+			//hasClass(value)
+			$('#hasclass-btn').click(function(){ 				
+				alert($('h1').hasClass('text-light'));
+			});
+
+			//toggleClass(value)
+			$('#toggleclass-btn').click(function(){ 
+				$('h1').toggleClass('text-center');
+			});
+
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- 26TG -->
+
+
+
+
+
+
